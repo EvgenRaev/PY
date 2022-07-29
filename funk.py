@@ -1,3 +1,24 @@
+#перше завдання
+def arg1(x):
+    def arg2(y):
+        return x + y
+    return arg2
+
+
+sum = arg1(10)
+print(sum(5))
+
+#друге завдання
+
+def funk():
+   xx = 1
+   yy = 2
+   zz = 3
+
+print ("Кількість змінних:", funk.__code__.co_nlocals)
+
+#третє завдання СПИСАВ У ВАС
+
 
 
 
@@ -26,18 +47,5 @@ def choose_func(nums: list, func1, func2):
 assert choose_func(nums1, square_nums, remove_negatives) == [1, 4, 9, 16, 25]
 
 assert choose_func(nums2, square_nums, remove_negatives) == [1, 3, 5]
-    
-
-
-    
-
-   
-
-
-
-
-
-    
-
 
 
