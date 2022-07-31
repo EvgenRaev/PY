@@ -1,43 +1,34 @@
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.read = 50
+
+    def get_d_mame(self):
+        print(f"{self.make}, {self.model}, {self.year},пробіг {self.read}")
 
 
+    def read_od(self):
+        print(f"Пробіг авто {self.read} км.")
 
-nums1 = [1, 2, 3, 4, 5]
+    def up_od(self, mil):
+        if mil >= self.read :
+            self.read = mil
+        else:
+            print ("fucke you")
 
-nums2 = [1, -2, 3, -4, 5]
-
-
-def square_nums(nums):
-    return [num ** 2 for num in nums]
-
-
-def remove_negatives(nums):
-    return [num for num in nums if num > 0]
-
-def choose_func(nums: list, func1, func2):
-    chek = [x > 0 for x in nums]
-
-    if all(chek):
-        return func1 (nums)
-    return func2 (nums)
+    def plus_od(self, mil_plus):
+        self.read += mil_plus
 
 
+my_n_car = Car('BMW', "535", "2015")
 
+my_n_car.get_d_mame()
 
-assert choose_func(nums1, square_nums, remove_negatives) == [1, 4, 9, 16, 25]
-
-assert choose_func(nums2, square_nums, remove_negatives) == [1, 3, 5]
-    
-
-
-    
-
-   
-
-
-
-
-
-    
-
-
-
+my_n_car.read_od()
+print(my_n_car.make)
+my_n_car.up_od(60)
+my_n_car.read_od()
+my_n_car.plus_od(45)
+my_n_car.read_od()
