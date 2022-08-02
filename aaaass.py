@@ -1,36 +1,16 @@
-x = ["BBC", "Discovery", "TV1000"]
-
-def is_exist(BBC):
 
 
+class Dog:
+    def __init__(self, age_dog):
+        self.age_dog = age_dog
 
 
-    if BBC in x :
+    def age_human(self):
+        fact_ = self.age_dog * 7
+        print(fact_)
+        return fact_
 
-        return 'Yes'
-    else:
-
-         return 'No'
-
-
-jj = is_exist('BBC')
-print(jj)
-
-
-def is_exist(N):
-
-
-
-
-    if N <= len (x) and N > 0 :
-
-        return 'Yes'
-    else:
-
-         return 'No'
-
-
-jj = is_exist(0)
-print(jj)
+about_age = Dog(2)
+about_age.age_human()
 
 
